@@ -1,104 +1,141 @@
  <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trébol Tienda</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: white;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-            color: #4CAF50;
-        }
-        .productos {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-        .producto {
-            background-color: #1e1e1e;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-            text-align: center;
-        }
-        .producto img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .producto h2 {
-            font-size: 18px;
-            margin: 10px 0;
-        }
-        .producto a {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 15px;
-            background-color: #25D366;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .producto a:hover {
-            background-color: #1ebe5d;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trébol Tienda</title>
+  <style>
+    :root{
+      --bg:#0b0f14;--card:#141b25;--chip:#1b2330;--muted:#9fb0c3;
+      --text:#e6edf6;--brand:#22c55e;--accent:#60a5fa;--stroke:#223042;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial}
+    h1{font-size:22px;margin:16px auto;text-align:center;color:var(--brand);letter-spacing:.5px}
+    .grid{max-width:1200px;margin:0 auto 40px;padding:0 16px;display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
+    @media (max-width:1024px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:640px){.grid{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid var(--stroke);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+    .thumb{position:relative;aspect-ratio:1/1;background:#0f1620}
+    .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .tag{position:absolute;left:8px;top:8px;background:rgba(255,255,255,.08);border:1px solid var(--stroke);color:#cfe5ff;padding:4px 8px;border-radius:999px;font-size:12px}
+    .content{padding:12px 14px}
+    .title{font-weight:800;font-size:16px;margin:0 0 10px}
+    .row{display:flex;justify-content:flex-end}
+    .btn{background:linear-gradient(135deg,var(--brand),var(--accent));color:#0a0f15;border:none;padding:10px 14px;border-radius:10px;font-weight:800;cursor:pointer;text-decoration:none}
+    .btn:hover{filter:brightness(1.05)}
+    footer{max-width:1200px;margin:12px auto 24px;color:var(--muted);font-size:12px;text-align:center;padding:0 16px}
+  </style>
 </head>
 <body>
+  <h1>Trébol Tienda</h1>
 
-    <h1>Trébol Tienda</h1>
+  <main class="grid">
+    <article class="card">
+      <div class="thumb">
+        <span class="tag">Nuevo</span>
+        <img src="trebol_1.jpeg?v=2" alt="Trébol 1" />
+      </div>
+      <div class="content">
+        <p class="title">Trébol 1</p>
+        <div class="row">
+          <a class="btn" target="_blank" href="https://wa.me/573147391803?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20Tr%C3%A9bol%201">Consultar</a>
+        </div>
+      </div>
+    </article>
 
-    <div class="productos">
-        <div class="producto">
-            <img src="trebol_1.jpeg" alt="Trébol 1">
-            <h2>Trébol 1</h2>
-            <a href="https://wa.me/573147391803?text=Hola,%20quiero%20información%20sobre%20Trébol%201" target="_blank">Consultar</a>
+    <article class="card">
+      <div class="thumb">
+        <span class="tag">Nuevo</span>
+        <img src="trebol_2.jpeg?v=2" alt="Trébol 2" />
+      </div>
+      <div class="content">
+        <p class="title">Trébol 2</p>
+        <div class="row">
+          <a class="btn" target="_blank" href="https://wa.me/573147391803?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20Tr%C3%A9bol%202">Consultar</a>
         </div>
-        <div class="producto">
-            <img src="trebol_2.jpeg" alt="Trébol 2">
-            <h2>Trébol 2</h2>
-            <a href="https://wa.me/573147391803?text=Hola,%20quiero%20información%20sobre%20Trébol%202" target="_blank">Consultar</a>
-        </div>
-        <div class="producto">
-            <img src="trebol_3.jpeg" alt="Trébol 3">
-            <h2>Trébol 3</h2>
-            <a href="https://wa.me/573147391803?text=Hola,%20quiero%20información%20sobre%20Trébol%203" target="_blank">Consultar</a>
-        </div>
-        <div class="producto">
-            <img src="trebol_4.jpeg" alt="Trébol 4">
-            <h2>Trébol 4</h2>
-            <a href="https://wa.me/573147391803?text=Hola,%20quiero%20información%20sobre%20Trébol%204" target="_blank">Consultar</a>
-        </div>
-        <div class="producto">
-            <img src="trebol_5.jpeg" alt="Trébol 5">
-            <h2>Trébol 5</h2>
-            <a href="https://wa.me/573147391803?text=Hola,%20quiero%20información%20sobre%20Trébol%205" target="_blank">Consultar</a>
-        </div>
-        <div class="producto">
-            <img src="trebol_6.jpeg" alt="Trébol 6">
-            <h2>Trébol 6</h2>
-            <a href="https://wa.me/573147391803?text=Hola,%20quiero%20información%20sobre%20Trébol%206" target="_blank">Consultar</a>
-        </div>
-        <div class="producto">
-            <img src="trebol_7.jpeg" alt="Trébol 7">
-            <h2>Trébol 7</h2>
-            <a href="https://wa.me/573147391803?text=Hola,%20quiero%20información%20sobre%20Trébol%207" target="_blank">Consultar</a>
-        </div>
-        <div class="producto">
-            <img src="trebol_8.jpeg" alt="Trébol 8">
-            <h2>Trébol 8</h2>
-            <a href="https://wa.me/573147391803?text=Hola,%20quiero%20información%20sobre%20Trébol%208" target="_blank">Consultar</a>
-        </div>
-    </div>
+      </div>
+    </article>
 
+    <article class="card">
+      <div class="thumb">
+        <span class="tag">Nuevo</span>
+        <img src="trebol_3.jpeg?v=2" alt="Trébol 3" />
+      </div>
+      <div class="content">
+        <p class="title">Trébol 3</p>
+        <div class="row">
+          <a class="btn" target="_blank" href="https://wa.me/573147391803?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20Tr%C3%A9bol%203">Consultar</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="thumb">
+        <span class="tag">Nuevo</span>
+        <img src="trebol_4.jpeg?v=2" alt="Trébol 4" />
+      </div>
+      <div class="content">
+        <p class="title">Trébol 4</p>
+        <div class="row">
+          <a class="btn" target="_blank" href="https://wa.me/573147391803?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20Tr%C3%A9bol%204">Consultar</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="thumb">
+        <span class="tag">Nuevo</span>
+        <img src="trebol_5.jpeg?v=2" alt="Trébol 5" />
+      </div>
+      <div class="content">
+        <p class="title">Trébol 5</p>
+        <div class="row">
+          <a class="btn" target="_blank" href="https://wa.me/573147391803?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20Tr%C3%A9bol%205">Consultar</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="thumb">
+        <span class="tag">Nuevo</span>
+        <img src="trebol_6.jpeg?v=2" alt="Trébol 6" />
+      </div>
+      <div class="content">
+        <p class="title">Trébol 6</p>
+        <div class="row">
+          <a class="btn" target="_blank" href="https://wa.me/573147391803?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20Tr%C3%A9bol%206">Consultar</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="thumb">
+        <span class="tag">Nuevo</span>
+        <img src="trebol_7.jpeg?v=2" alt="Trébol 7" />
+      </div>
+      <div class="content">
+        <p class="title">Trébol 7</p>
+        <div class="row">
+          <a class="btn" target="_blank" href="https://wa.me/573147391803?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20Tr%C3%A9bol%207">Consultar</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="thumb">
+        <span class="tag">Nuevo</span>
+        <img src="trebol_8.jpeg?v=2" alt="Trébol 8" />
+      </div>
+      <div class="content">
+        <p class="title">Trébol 8</p>
+        <div class="row">
+          <a class="btn" target="_blank" href="https://wa.me/573147391803?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20Tr%C3%A9bol%208">Consultar</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer>Si no ves las imágenes, refresca con CTRL/CMD + F5. Asegúrate de que los nombres de archivo coincidan exactamente.</footer>
 </body>
 </html>
