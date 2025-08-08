@@ -30,9 +30,7 @@ a{color:inherit;text-decoration:none}
 .badges{display:flex;gap:8px;flex-wrap:wrap}
 .badge{background:var(--chip);border:1px solid #223042;padding:8px 10px;border-radius:999px;font-size:12px;color:var(--muted)}
 .container{max-width:1200px;margin:0 auto;padding:16px}
-.grid{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
-}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
 @media (max-width:1024px){.grid{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:768px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:520px){.grid{grid-template-columns:1fr}}
@@ -49,10 +47,7 @@ a{color:inherit;text-decoration:none}
 .title{font-size:15px;font-weight:700;line-height:1.3;margin:2px 0 8px}
 .row{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .price{font-weight:800;font-size:16px;background:linear-gradient(135deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
-.btn{
-  background:linear-gradient(135deg,var(--brand),var(--accent));
-  color:#0a0f15;border:none;padding:10px 12px;border-radius:10px;font-weight:800;cursor:pointer
-}
+.btn{background:linear-gradient(135deg,var(--brand),var(--accent));color:#0a0f15;border:none;padding:10px 12px;border-radius:10px;font-weight:800;cursor:pointer}
 .footer{max-width:1200px;margin:24px auto 48px;color:var(--muted);font-size:12px;text-align:center;padding:0 16px}
 
 /* Lightbox */
@@ -75,128 +70,122 @@ a{color:inherit;text-decoration:none}
       <span class="badge">Pagos seguros</span>
     </div>
   </header>
+
   <main class="container">
     <section id="grid" class="grid">
-      
-    <article class="card" data-title="trébol 1">
-      <a href="#" class="thumb" onclick="openLightbox('img/trebol 1.jpeg');return false;">
-        <span class="tag">Nuevo</span>
-        <img loading="lazy" src="img/trebol 1.jpeg" alt="Trébol 1">
-      </a>
-      <div class="content">
-        <div class="title">Trébol 1</div>
-        <div class="row">
-          <div class="price"></div>
-          <button class="btn" onclick="wa('Trébol 1')">Consultar</button>
-        </div>
-      </div>
-    </article>
-    
 
-    <article class="card" data-title="trébol 2">
-      <a href="#" class="thumb" onclick="openLightbox('img/trebol 2.jpeg');return false;">
-        <span class="tag">Nuevo</span>
-        <img loading="lazy" src="img/trebol 2.jpeg" alt="Trébol 2">
-      </a>
-      <div class="content">
-        <div class="title">Trébol 2</div>
-        <div class="row">
-          <div class="price"></div>
-          <button class="btn" onclick="wa('Trébol 2')">Consultar</button>
+      <article class="card" data-title="trébol 1">
+        <a href="#" class="thumb" onclick="openLightbox('trebol%201.jpeg');return false;">
+          <span class="tag">Nuevo</span>
+          <img loading="lazy" src="trebol%201.jpeg" alt="Trébol 1">
+        </a>
+        <div class="content">
+          <div class="title">Trébol 1</div>
+          <div class="row">
+            <div class="price"></div>
+            <button class="btn" onclick="wa('Trébol 1')">Consultar</button>
+          </div>
         </div>
-      </div>
-    </article>
-    
+      </article>
 
-    <article class="card" data-title="trébol 3">
-      <a href="#" class="thumb" onclick="openLightbox('img/trebol 3.jpeg');return false;">
-        <span class="tag">Nuevo</span>
-        <img loading="lazy" src="img/trebol 3.jpeg" alt="Trébol 3">
-      </a>
-      <div class="content">
-        <div class="title">Trébol 3</div>
-        <div class="row">
-          <div class="price"></div>
-          <button class="btn" onclick="wa('Trébol 3')">Consultar</button>
+      <article class="card" data-title="trébol 2">
+        <a href="#" class="thumb" onclick="openLightbox('trebol%202.jpeg');return false;">
+          <span class="tag">Nuevo</span>
+          <img loading="lazy" src="trebol%202.jpeg" alt="Trébol 2">
+        </a>
+        <div class="content">
+          <div class="title">Trébol 2</div>
+          <div class="row">
+            <div class="price"></div>
+            <button class="btn" onclick="wa('Trébol 2')">Consultar</button>
+          </div>
         </div>
-      </div>
-    </article>
-    
+      </article>
 
-    <article class="card" data-title="trébol 4">
-      <a href="#" class="thumb" onclick="openLightbox('img/trebol 4.jpeg');return false;">
-        <span class="tag">Nuevo</span>
-        <img loading="lazy" src="img/trebol 4.jpeg" alt="Trébol 4">
-      </a>
-      <div class="content">
-        <div class="title">Trébol 4</div>
-        <div class="row">
-          <div class="price"></div>
-          <button class="btn" onclick="wa('Trébol 4')">Consultar</button>
+      <article class="card" data-title="trébol 3">
+        <a href="#" class="thumb" onclick="openLightbox('trebol%203.jpeg');return false;">
+          <span class="tag">Nuevo</span>
+          <img loading="lazy" src="trebol%203.jpeg" alt="Trébol 3">
+        </a>
+        <div class="content">
+          <div class="title">Trébol 3</div>
+          <div class="row">
+            <div class="price"></div>
+            <button class="btn" onclick="wa('Trébol 3')">Consultar</button>
+          </div>
         </div>
-      </div>
-    </article>
-    
+      </article>
 
-    <article class="card" data-title="trébol 5">
-      <a href="#" class="thumb" onclick="openLightbox('img/trebol 5.jpeg');return false;">
-        <span class="tag">Nuevo</span>
-        <img loading="lazy" src="img/trebol 5.jpeg" alt="Trébol 5">
-      </a>
-      <div class="content">
-        <div class="title">Trébol 5</div>
-        <div class="row">
-          <div class="price"></div>
-          <button class="btn" onclick="wa('Trébol 5')">Consultar</button>
+      <article class="card" data-title="trébol 4">
+        <a href="#" class="thumb" onclick="openLightbox('trebol%204.jpeg');return false;">
+          <span class="tag">Nuevo</span>
+          <img loading="lazy" src="trebol%204.jpeg" alt="Trébol 4">
+        </a>
+        <div class="content">
+          <div class="title">Trébol 4</div>
+          <div class="row">
+            <div class="price"></div>
+            <button class="btn" onclick="wa('Trébol 4')">Consultar</button>
+          </div>
         </div>
-      </div>
-    </article>
-    
+      </article>
 
-    <article class="card" data-title="trébol 6">
-      <a href="#" class="thumb" onclick="openLightbox('img/trebol 6.jpeg');return false;">
-        <span class="tag">Nuevo</span>
-        <img loading="lazy" src="img/trebol 6.jpeg" alt="Trébol 6">
-      </a>
-      <div class="content">
-        <div class="title">Trébol 6</div>
-        <div class="row">
-          <div class="price"></div>
-          <button class="btn" onclick="wa('Trébol 6')">Consultar</button>
+      <article class="card" data-title="trébol 5">
+        <a href="#" class="thumb" onclick="openLightbox('trebol%205.jpeg');return false;">
+          <span class="tag">Nuevo</span>
+          <img loading="lazy" src="trebol%205.jpeg" alt="Trébol 5">
+        </a>
+        <div class="content">
+          <div class="title">Trébol 5</div>
+          <div class="row">
+            <div class="price"></div>
+            <button class="btn" onclick="wa('Trébol 5')">Consultar</button>
+          </div>
         </div>
-      </div>
-    </article>
-    
+      </article>
 
-    <article class="card" data-title="trébol 7">
-      <a href="#" class="thumb" onclick="openLightbox('img/trebol 7.jpeg');return false;">
-        <span class="tag">Nuevo</span>
-        <img loading="lazy" src="img/trebol 7.jpeg" alt="Trébol 7">
-      </a>
-      <div class="content">
-        <div class="title">Trébol 7</div>
-        <div class="row">
-          <div class="price"></div>
-          <button class="btn" onclick="wa('Trébol 7')">Consultar</button>
+      <article class="card" data-title="trébol 6">
+        <a href="#" class="thumb" onclick="openLightbox('trebol%206.jpeg');return false;">
+          <span class="tag">Nuevo</span>
+          <img loading="lazy" src="trebol%206.jpeg" alt="Trébol 6">
+        </a>
+        <div class="content">
+          <div class="title">Trébol 6</div>
+          <div class="row">
+            <div class="price"></div>
+            <button class="btn" onclick="wa('Trébol 6')">Consultar</button>
+          </div>
         </div>
-      </div>
-    </article>
-    
+      </article>
 
-    <article class="card" data-title="trébol 8">
-      <a href="#" class="thumb" onclick="openLightbox('img/trebol 8.jpeg');return false;">
-        <span class="tag">Nuevo</span>
-        <img loading="lazy" src="img/trebol 8.jpeg" alt="Trébol 8">
-      </a>
-      <div class="content">
-        <div class="title">Trébol 8</div>
-        <div class="row">
-          <div class="price"></div>
-          <button class="btn" onclick="wa('Trébol 8')">Consultar</button>
+      <article class="card" data-title="trébol 7">
+        <a href="#" class="thumb" onclick="openLightbox('trebol%207.jpeg');return false;">
+          <span class="tag">Nuevo</span>
+          <img loading="lazy" src="trebol%207.jpeg" alt="Trébol 7">
+        </a>
+        <div class="content">
+          <div class="title">Trébol 7</div>
+          <div class="row">
+            <div class="price"></div>
+            <button class="btn" onclick="wa('Trébol 7')">Consultar</button>
+          </div>
         </div>
-      </div>
-    </article>
-    
+      </article>
+
+      <article class="card" data-title="trébol 8">
+        <a href="#" class="thumb" onclick="openLightbox('trebol%208.jpeg');return false;">
+          <span class="tag">Nuevo</span>
+          <img loading="lazy" src="trebol%208.jpeg" alt="Trébol 8">
+        </a>
+        <div class="content">
+          <div class="title">Trébol 8</div>
+          <div class="row">
+            <div class="price"></div>
+            <button class="btn" onclick="wa('Trébol 8')">Consultar</button>
+          </div>
+        </div>
+      </article>
+
     </section>
   </main>
 
